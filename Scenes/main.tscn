@@ -14,13 +14,6 @@ script = ExtResource("1_maiik")
 
 [node name="rock" parent="." instance=ExtResource("3_lk0ik")]
 
-[node name="Button" type="Button" parent="."]
-offset_left = 146.0
-offset_top = -58.0
-offset_right = 225.0
-offset_bottom = -27.0
-text = "DESTROY"
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
@@ -42,8 +35,6 @@ position = Vector2(269, 14)
 position = Vector2(1071, 189)
 scale = Vector2(0.469865, 0.469865)
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button" to="rock" method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="add_fuel" from="Ship" to="Fuel" method="_on_ship_add_fuel"]
 [connection signal="add_fuel" from="Ship" to="CanvasLayer/fuelbar" method="_on_ship_add_fuel"]
