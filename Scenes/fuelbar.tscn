@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://6r3p0vg7bn2"]
+
+[ext_resource type="Texture2D" uid="uid://ckh15vg5hdwev" path="res://Assets/fuelbar-under.png" id="1_no3hl"]
+[ext_resource type="Script" path="res://Scenes/fuelbar.gd" id="1_u6875"]
+[ext_resource type="Texture2D" uid="uid://djfownwhvkwuq" path="res://Assets/fuelbar-over.png" id="2_rriuu"]
+[ext_resource type="Texture2D" uid="uid://cbe61k26ka2ps" path="res://Assets/fuelbar-progress.png" id="3_bjlho"]
+
+[node name="fuelbar" type="Node2D"]
+script = ExtResource("1_u6875")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+step = 0.0
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("1_no3hl")
+texture_over = ExtResource("2_rriuu")
+texture_progress = ExtResource("3_bjlho")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 51.0
+offset_top = 488.0
+offset_right = 55.0
+offset_bottom = 515.0
+scale = Vector2(2.2, 2.2)
+value = 100.0
+rounded = true

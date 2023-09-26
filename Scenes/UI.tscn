@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://2jkvypw6yutp"]
+
+[ext_resource type="PackedScene" uid="uid://6r3p0vg7bn2" path="res://Scenes/fuelbar.tscn" id="1_ssyj6"]
+
+[node name="UI" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fuelbar" parent="CanvasLayer" instance=ExtResource("1_ssyj6")]
+position = Vector2(1028, 4)

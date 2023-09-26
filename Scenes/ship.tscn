@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://mvty3svuj6na"]
+
+[ext_resource type="Texture2D" uid="uid://cbe3e07hvoeco" path="res://Assets/ship.png" id="1_wogva"]
+[ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="2_kafxi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iebhl"]
+radius = 34.0
+height = 186.0
+
+[node name="Ship" type="CharacterBody2D" groups=["ship"]]
+script = ExtResource("2_kafxi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["ship"]]
+texture = ExtResource("1_wogva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["ship"]]
+shape = SubResource("CapsuleShape2D_iebhl")
+
+[node name="Gun" type="Marker2D" parent="."]
+position = Vector2(0, -167)
+gizmo_extents = 37.3
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["ship"]]
+shape = SubResource("CapsuleShape2D_iebhl")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,421 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf7b3ve40wgqo"]
+
+[ext_resource type="Texture2D" uid="uid://bhv1myqpmh3pl" path="res://Assets/bg-space.png" id="1_tuee4"]
+[ext_resource type="Texture2D" uid="uid://cw6s4xp5uyx7a" path="res://Assets/bg-star.png" id="2_4guue"]
+[ext_resource type="Texture2D" uid="uid://cpnklrpyc15ct" path="res://Assets/bg-planet.png" id="3_ivtys"]
+[ext_resource type="Script" path="res://addons/nklbdev.parallax/Parallax.gd" id="4_ylu0u"]
+
+[node name="Map" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Parallax" type="Node2D" parent="ParallaxBackground"]
+script = ExtResource("4_ylu0u")
+enabled_in_editor = true
+motion_scale = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax"]
+position = Vector2(1023, 581)
+scale = Vector2(1.11094, 1.15278)
+texture = ExtResource("1_tuee4")
+
+[node name="star" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.698039, 0.752941, 0.94902, 1)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(4000, 4000)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(243, 50)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(723, 239)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1078, 28)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1637, 345)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2166, 51)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2906, 315)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3570, 5)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3570, 5)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(328, 926)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(808, 1115)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1163, 904)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D12" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1722, 1221)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D13" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2251, 927)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D14" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2991, 1191)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D15" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3655, 881)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D16" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3655, 881)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D17" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(349, 1876)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D18" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(829, 2065)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D19" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1184, 1854)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D20" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1743, 2171)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D21" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2272, 1877)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D22" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3012, 2141)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D23" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3676, 1831)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D24" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3676, 1831)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D25" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(296, 3061)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D26" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(776, 3250)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D27" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1131, 3039)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D28" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(1690, 3356)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D29" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2219, 3062)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D30" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(2959, 3326)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D31" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3623, 3016)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D32" type="Sprite2D" parent="ParallaxBackground/star"]
+position = Vector2(3623, 3016)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="star2" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.227451)
+scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(4000, 4000)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(243, 50)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1454, 706)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1486, 3984)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(2596, 4792)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(2166, 51)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1012, 4966)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(3570, 5)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(6040, 3458)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(328, 926)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(6394, 1274)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(6592, 316)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D12" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(5486, 1352)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D13" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(2251, 927)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D14" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(5124, 436)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D15" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(5078, 2582)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D16" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(4964, 4944)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D17" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(349, 1876)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D18" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(829, 2065)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D19" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(3788, 5562)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D20" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1743, 2171)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D21" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1662, 5446)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D22" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(6670, 4934)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D23" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(3676, 1831)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D24" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(7714, 4586)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D25" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(2794, 6970)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D26" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1182, 7308)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D27" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1131, 3039)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D28" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(1690, 3356)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D29" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(4612, 7056)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D30" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(7402, 6636)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D31" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(6144, 5408)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="Sprite2D32" type="Sprite2D" parent="ParallaxBackground/star2"]
+position = Vector2(7852, 2504)
+texture = ExtResource("2_4guue")
+centered = false
+
+[node name="planet" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(8000, 8000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/planet"]
+position = Vector2(121, 242)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/planet"]
+position = Vector2(1890, 968)
+scale = Vector2(2.49207, 2.68534)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/planet"]
+position = Vector2(660, 3651)
+scale = Vector2(1.05012, 0.995403)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/planet"]
+position = Vector2(6111, 1613)
+scale = Vector2(8.49857, 8.05573)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/planet"]
+position = Vector2(3279, 6134)
+scale = Vector2(4.60142, 4.36165)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="planet2" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.379422, 0.362546, 0.69119, 1)
+scale = Vector2(0.556261, 0.510154)
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(8000, 8000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/planet2"]
+position = Vector2(7586.37, 6256.93)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/planet2"]
+position = Vector2(13044.2, 12100.3)
+scale = Vector2(2.49207, 2.68534)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/planet2"]
+position = Vector2(22478.7, 8767.93)
+scale = Vector2(1.05012, 0.995403)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/planet2"]
+position = Vector2(6111, 1613)
+scale = Vector2(8.49857, 8.05573)
+texture = ExtResource("3_ivtys")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/planet2"]
+position = Vector2(16017.7, 8924.75)
+scale = Vector2(4.60142, 4.36165)
+texture = ExtResource("3_ivtys")
+centered = false

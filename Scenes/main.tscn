@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://byo4hpfqvps76"]
+
+[ext_resource type="PackedScene" uid="uid://bf7b3ve40wgqo" path="res://Scenes/map.tscn" id="1_iw7it"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_maiik"]
+[ext_resource type="PackedScene" uid="uid://mvty3svuj6na" path="res://Scenes/ship.tscn" id="2_w46ql"]
+[ext_resource type="PackedScene" uid="uid://cccq7qws1vci7" path="res://Scenes/rock.tscn" id="3_lk0ik"]
+[ext_resource type="PackedScene" uid="uid://6r3p0vg7bn2" path="res://Scenes/fuelbar.tscn" id="5_mluvp"]
+[ext_resource type="PackedScene" uid="uid://do1cof2ouqnfq" path="res://Scenes/fuel.tscn" id="6_kytn3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_maiik")
+
+[node name="Map" parent="." instance=ExtResource("1_iw7it")]
+
+[node name="rock" parent="." instance=ExtResource("3_lk0ik")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 146.0
+offset_top = -58.0
+offset_right = 225.0
+offset_bottom = -27.0
+text = "DESTROY"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Ship" parent="." instance=ExtResource("2_w46ql")]
+
+[node name="Camera2D" type="Camera2D" parent="Ship"]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Fuel" parent="." instance=ExtResource("6_kytn3")]
+position = Vector2(269, 14)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fuelbar" parent="CanvasLayer" instance=ExtResource("5_mluvp")]
+position = Vector2(1071, 189)
+scale = Vector2(0.469865, 0.469865)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="rock" method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="add_fuel" from="Ship" to="Fuel" method="_on_ship_add_fuel"]
+[connection signal="add_fuel" from="Ship" to="CanvasLayer/fuelbar" method="_on_ship_add_fuel"]
+[connection signal="rocky_destroy" from="Ship" to="." method="_on_ship_rocky_destroy"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="fuel_pickup" from="Fuel" to="CanvasLayer/fuelbar" method="_on_fuel_fuel_pickup"]
+[connection signal="has_fuel" from="CanvasLayer/fuelbar" to="Ship" method="_on_fuelbar_has_fuel"]
+[connection signal="no_fuel" from="CanvasLayer/fuelbar" to="Ship" method="_on_fuelbar_no_fuel"]

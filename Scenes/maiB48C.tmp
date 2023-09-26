@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://byo4hpfqvps76"]
+
+[ext_resource type="PackedScene" uid="uid://bf7b3ve40wgqo" path="res://Scenes/map.tscn" id="1_iw7it"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_maiik"]
+[ext_resource type="PackedScene" uid="uid://mvty3svuj6na" path="res://Scenes/ship.tscn" id="2_w46ql"]
+[ext_resource type="PackedScene" uid="uid://cccq7qws1vci7" path="res://Scenes/rock.tscn" id="3_lk0ik"]
+[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="4_0ch5y"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_maiik")
+
+[node name="Map" parent="." instance=ExtResource("1_iw7it")]
+
+[node name="Ship" parent="." instance=ExtResource("2_w46ql")]
+
+[node name="rock" parent="." instance=ExtResource("3_lk0ik")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 146.0
+offset_top = -59.0
+offset_right = 154.0
+offset_bottom = -51.0
+text = "DESTROY"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.990021, 0.966605)
+position_smoothing_enabled = true
+position_smoothing_speed = 1000.0
+script = ExtResource("4_0ch5y")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="rock" method="_on_button_pressed"]
